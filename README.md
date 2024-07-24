@@ -6,6 +6,9 @@ KGI4NFDI advocates for a central and reusable Knowledge Graph Infrastructure (KG
 ## Website
 More information on the website [base4nfdi.de](https://base4nfdi.de/projects/kgi4nfdi)
 
+## GitHub 
+For more repositories see our [GitHub organizsation.](https://github.com/KGI4NFDI)
+
 ## License
 This repository is licenced under the Creative Commons [CC-BY-SA-4.0 licence](https://creativecommons.org/licenses/by-sa/4.0/).
 
