@@ -1,0 +1,176 @@
+@font-face {
+  font-family: "Fira Sans";
+  src: url("../fonts/FiraSans.woff2") format("woff2");
+  }
+  
+  :root {
+  --color-anthrazit: #45546b;
+  --color-blue: #0abaf0;
+  --color-blue-dark: #3c7ca0;
+  --color-grey: #6c8080;
+  --color-grey-80: #6c8080cc;
+  --color-grey-60: #6c808099;
+  --color-grey-40: #6c808066;
+  --color-grey-20: #6c808033;
+  --color-grey-10: #6c80801a;
+  --color-white: #ffffff;
+  
+  --border-radius: 5px;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+  :root {
+  --color-anthrazit: #45546b;
+  --color-blue: #0abaf0;
+  --color-blue-dark: #3c7ca0;
+  --color-grey: #6c8080;
+  --color-grey-80: #6c8080cc;
+  --color-grey-60: #6c808099;
+  --color-grey-40: #6c808066;
+  --color-grey-20: #6c808033;
+  --color-grey-10: #6c80801a;
+  --color-white: #ffffff;
+  }
+  }
+  
+  body,
+  html {
+  font-family: "Fira Sans";
+  }
+  
+  a {
+  color: var(--color-blue);
+  background-color: transparent;
+  text-decoration: none !important;
+  
+  &:focus,
+  &:hover {
+  color: var(--color-anthrazit);
+  }
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+  font-family: "Fira Sans";
+  }
+
+  .align-top {
+    vertical-align: top;
+   }
+
+  .btn {
+  border: 0;
+  border-radius: var(--border-radius);
+  font-size: 1.2rem; // maybe 1rem
+  padding: 10px 20px !important;
+  }
+  
+  .btn-primary {
+  background-color: var(--color-blue);
+  
+  &:focus,
+  &:hover {
+  background-color: var(--color-anthrazit);
+  }
+  }
+  
+  .btn-outline-primary {
+  background-color: transparent;
+  border: 1px solid var(--color-blue);
+  color: var(--color-blue);
+  
+  &:active {
+  background-color: var(--color-blue);
+  border: 1px solid var(--color-blue);
+  color: var(--color-white);
+  outline: 0;
+  }
+  
+  &:focus,
+  &:hover {
+  background-color: var(--color-blue);
+  border: 1px solid var(--color-blue);
+  color: var(--color-white);
+  }
+  }
+  
+  .navbar {
+  background: var(--color-anthrazit);
+  font-family: "Fira Sans";
+  }
+  
+  .navbar .navbar-nav .nav-link.active {
+  color: var(--color-blue);
+  font-weight: bold !important;
+  }
+  
+  #navbar-main .main-menu-item .nav-link {
+  color: var(--color-white) !important;
+  
+  &.active {
+  span {
+  color: var(--color-blue);
+  }
+  }
+  
+  &:focus,
+  &:hover {
+  color: var(--color-blue) !important;
+  }
+  }
+  
+  .article-title a {
+    font-family: "Fira Sans";
+  }
+
+  .fa-lg {
+    font-size: 2em;
+  }
+
+  .page-body {
+    padding-bottom: 50px;
+  }
+
+ .page-footer, .site-footer {
+    background-color: var(--color-anthrazit);
+  }
+
+ .powered-by {
+    text-align: center;
+  }
+
+  footer p {
+    color: var(--color-white);
+    font-size: 0.67rem;
+    text-align: center;
+  }
+
+  .adjust-text-align {
+    text-align: start !important;
+  }
+
+  .site-footer {
+    margin: 2rem 0;
+    padding: 25px 0;
+  }
+
+  footer a:hover, footer a:active, footer a:focus {
+    text-decoration: underline !important;
+    color: var(--color-blue);
+  }
+
+  .footer-license-icons {
+    display: block;
+  }
+
+  .footer-license-icons a:hover {
+    text-decoration: none !important;
+    }
+
+  .page-wrapper {
+    min-height: 100svh;
+  }

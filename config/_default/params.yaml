@@ -1,0 +1,143 @@
+# SITE SETUP
+# Guide: https://docs.hugoblox.com/tutorial/
+# Documentation: https://docs.hugoblox.com/
+# This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
+
+# Appearance
+
+appearance:
+  theme_day: minimal
+  theme_night: minimal
+  font: native
+  font_size: M
+
+# SEO
+
+# TODO adjust this file
+
+marketing:
+  seo:
+    site_type: Organization
+    local_business_type: ''
+    org_name: ''
+    description: 'Our cool KGI4NFDI service'
+    twitter: ''
+  analytics:
+    google_analytics: ''
+    baidu_tongji: ''
+    google_tag_manager: ''
+    microsoft_clarity: ''
+  verification:
+    google: ''
+    baidu: ''
+
+# Site header
+
+header:
+  navbar:
+    enable: true
+    align: r
+    show_logo: true
+    show_language: false
+    show_day_night: true
+    show_search: true
+    show_theme_chooser: true
+    highlight_active_link: true
+    logo:
+      text: ""
+      filename: "logo.png"
+
+# Site footer
+
+footer:
+  about: '<b>This page</b><br>
+    Find this page on <a href="https://github.com/base4nfdi/website-template-hugo" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-github fa-lg text-white"></i>
+    </a>'
+  mission: '<b>Base4NFDI</b><br>
+        [What is Base4NDFI?](https://www.base4nfdi.de)<br>
+        [What is a Basic Service?](https://base4nfdi.de/process/basic-services)<br>
+        [Our Mission Statement](https://base4nfdi.de/about/mission-statement)<br>
+        '
+  dfg: ' KGI4NFDI is funded as part of [Base4NFDI](https://base4nfdi.de).<br>
+        Grant number: 521466146.
+        '
+  copyright:
+    notice: '<b>Legal</b><br>
+    [Privacy](https://www.base4nfdi.de) | [Legal Note](https://www.base4nfdi.de) <br>
+    [Accessibility](https://www.base4nfdi.de)<br> <br>
+    © {year} KGI4NFDI  <br>
+    This work is licensed <br>
+    under {license}'
+    license:
+      enable: true
+      allow_derivatives: true
+      share_alike: true
+      allow_commercial: true
+
+
+
+# Localization
+
+locale:
+  date_format: '_2 January 2006'
+  time_format: '15:04'
+  address_format: en-us
+
+# Site features
+
+features:
+  syntax_highlighter:
+    enable: false
+    extra_languages:
+      - r
+      - latex
+  math:
+    enable: true
+  privacy_pack:
+    enable: false
+  repository:
+    url: 'https://github.com/base4nfdi/website-template-hugo'
+    content_dir: content
+    branch: main
+  avatar:
+    gravatar: false
+    shape: circle
+  comment:
+    provider: ''
+    disqus:
+      shortname: ''
+      show_count: true
+    commento:
+      url: ''
+    giscus:
+      repo: ''
+      repo_id: ''
+      category: ''
+      category_id: ''
+  search:
+    provider: wowchemy
+    algolia:
+      app_id: ''
+      api_key: ''
+      index_name: ''
+      show_logo: true
+  map:
+    provider: 'mapnik'
+    api_key: ''
+    zoom: 15
+
+# Extensions
+
+extensions:
+  decap_cms:
+    branch: main
+    local_backend: false
+  academicons:
+    enable: true
+
+# Citation style
+
+publications:
+  date_format: January 2006
+  citation_style: apa
