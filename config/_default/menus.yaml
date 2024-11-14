@@ -28,6 +28,9 @@ main:
   - name: People
     url: people
     weight: 80
+  - name: Personas
+    url: personas
+    weight: 80
   - name: Contact
     url: contact
     weight: 90
