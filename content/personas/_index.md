@@ -5,8 +5,8 @@ type: book
 ---
 Here are our personas:
 
-![Image alt](Base4NFDI_PersonasKGI.001.jpg)
-![Image alt](Base4NFDI_PersonasKGI.002.jpg)
-![Image alt](Base4NFDI_PersonasKGI.003.jpg)
-![Image alt](Base4NFDI_PersonasKGI.004.jpg)
-![Image alt](Base4NFDI_PersonasKGI.005.jpg)
+![Base4NFDI_PersonasKGI_112024.001.jpg](Base4NFDI_PersonasKGI_112024.001.jpg))
+![Base4NFDI_PersonasKGI_112024.002.jpg](Base4NFDI_PersonasKGI_112024.002.jpg)
+![Base4NFDI_PersonasKGI_112024.003.jpg](Base4NFDI_PersonasKGI_112024.003.jpg)
+![Base4NFDI_PersonasKGI_112024.004.jpg](Base4NFDI_PersonasKGI_112024.004.jpg)
+![Base4NFDI_PersonasKGI_112024.005.jpg](Base4NFDI_PersonasKGI_112024.005.jpg)
