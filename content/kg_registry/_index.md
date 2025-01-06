@@ -13,6 +13,7 @@ type: page
     <link href="https://unpkg.com/@triply/yasgui/build/yasgui.min.css" rel="stylesheet" type="text/css"/>
     <script src="https://unpkg.com/@triply/yasgui/build/yasgui.min.js"></script>    
     <script src="/js/index.js"></script>
+    <script src="/kgi4nfdi/js/index.js"></script>
     <style>
         .yasgui .autocompleteWrapper {
             display: none !important;
