@@ -9,7 +9,7 @@ appearance:
   theme_day: minimal
   theme_night: minimal
   font: native
-  font_size: M
+  font_size: XL
 
 # SEO
 
@@ -23,12 +23,9 @@ marketing:
     description: 'Our cool KGI4NFDI service'
     twitter: ''
   analytics:
-    google_analytics: ''
     baidu_tongji: ''
-    google_tag_manager: ''
     microsoft_clarity: ''
   verification:
-    google: ''
     baidu: ''
 
 # Site header
@@ -141,3 +138,8 @@ extensions:
 publications:
   date_format: January 2006
   citation_style: apa
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

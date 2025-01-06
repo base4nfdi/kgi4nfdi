@@ -7,48 +7,17 @@ type: landing
 sections:
   - block: hero
     content:
-      title: KGI4NFDI
+      title: Welcome to **KGI4NFDI**
       image:
         filename: KGI4NFDI.png
       text: |
-        … is a basic service under development for the German National Research Data Infrastructure ([Nationale Forschungsdaten&shy;infrastruktur – NFDI](https://www.nfdi.de/?lang=en)). KGI4NFDI is part of [Base4NFDI](https://base4nfdi.de/) and is currently in its initialisation phase, the first of three service development phases.
+        The **Knowledge Graph Infrastructure (KGI4NFDI)** is a basic service under development for the **[German National Research Data Infrastructure – NFDI](https://www.nfdi.de/?lang=en)**. **KGI4NFDI** aims to serve researchers, consortia, and institutions by becoming your gateway to seamless, connected, and FAIR (Findable, Accessible, Interoperable, and Reusable) research data. **KGI4NFDI* enables the creation, exploration, and harmonization of knowledge graphs (KGs) across diverse disciplines and international frameworks. **KGI4NFDI** is currently in its initialisation phase, the first of three service development phases.
 
         {{% cta cta_link="./about/" cta_text="Read more →" %}}
 
       # TODO here also other services could be linked which you provide, e.g. a hub or the documentation
   
-  - block: collection
-    content:
-      title: Latest News
-      subtitle:
-      text:
-      count: 3
-      filters:
-        author: ''
-        category: ''
-        exclude_featured: false
-        publication_type: ''
-        tag: ''
-        folders:
-          - news
-      offset: 0
-      order: desc
-    design:
-      view: card
-      columns: '1'
 
-  - block: collection
-    content:
-      title: Latest Publications
-      text: ""
-      count: 5
-      filters:
-        folders:
-          - publications
-        #publication_type: 'article'
-    design:
-      view: list
-      columns: '1'
 
   - block: markdown
     content:
