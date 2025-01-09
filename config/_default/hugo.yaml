@@ -5,7 +5,7 @@
 
 title: KGI4NFDI
 baseURL: '/'
-
+relativeURLs: true
 ############################
 ## LANGUAGE
 ############################
