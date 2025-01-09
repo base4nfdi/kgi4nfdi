@@ -1,0 +1,2 @@
+SELECT * WHERE
+{?sub ?pred ?obj .}

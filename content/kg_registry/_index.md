@@ -1,24 +1,22 @@
 ---
 title: Public SPARQL Endpoint
-date: 2024-01-01
+date: 2025-01-01
 type: page
+
+dropdown_items:
+  - query_label: "Get all triplets"
+    backend: "https://api.dev.kgi.services.base4nfdi.de"
+    query_path: "query_examples/list_all_triplets.rq"
+    
+  - query_label: "Count all triplets"
+    backend: "https://api.dev.kgi.services.base4nfdi.de"
+    query_path: "query_examples/count_all_triplets.rq"
+    
+  - query_label: "KGs overview list"
+    backend: "https://api.dev.kgi.services.base4nfdi.de"
+    query_path: "query_examples/kg_overview_list.rq"
 ---
 
-<head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-          crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
-    <link href="https://unpkg.com/@triply/yasgui/build/yasgui.min.css" rel="stylesheet" type="text/css"/>
-    <script src="https://unpkg.com/@triply/yasgui/build/yasgui.min.js"></script>    
-    <script src="/js/index.js"></script>
-    <script src="/kgi4nfdi/js/index.js"></script>
-    <style>
-        .yasgui .autocompleteWrapper {
-            display: none !important;
-        }
-    </style>
-    <title></title>
-</head>
-<div id="yasgui_div" style="width: 100%;"></div>
+
+{{< query_control >}}
+

@@ -11,7 +11,7 @@ sections:
       image:
         filename: KGI4NFDI.png
       text: |
-        The **Knowledge Graph Infrastructure (KGI4NFDI)** is a basic service under development for the **[German National Research Data Infrastructure – NFDI](https://www.nfdi.de/?lang=en)**. **KGI4NFDI** aims to serve researchers, consortia, and institutions by becoming your gateway to seamless, connected, and FAIR (Findable, Accessible, Interoperable, and Reusable) research data. **KGI4NFDI* enables the creation, exploration, and harmonization of knowledge graphs (KGs) across diverse disciplines and international frameworks. **KGI4NFDI** is currently in its initialisation phase, the first of three service development phases.
+        The **Knowledge Graph Infrastructure (KGI4NFDI)** is a basic service under development for the **[German National Research Data Infrastructure – NFDI](https://www.nfdi.de/?lang=en)**. **KGI4NFDI** aims to serve researchers, consortia, and institutions by becoming your gateway to seamless, connected, and FAIR (Findable, Accessible, Interoperable, and Reusable) research data. **KGI4NFDI** enables the creation, exploration, and harmonization of knowledge graphs (KGs) across diverse disciplines and international frameworks. **KGI4NFDI** is currently in its initialisation phase, the first of three service development phases.
 
         {{% cta cta_link="./about/" cta_text="Read more →" %}}
 

@@ -1,0 +1,36 @@
+PREFIX dcat:    <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX foaf:    <http://xmlns.com/foaf/0.1/>
+PREFIX vcard:   <http://www.w3.org/2006/vcard/ns#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wd:      <http://www.wikidata.org/entity/>
+PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?dataset ?title ?description ?publisher ?publisherNameWikidata
+WHERE {
+  ?dataset a dcat:Dataset ;
+           dcterms:title ?title ;
+           dcterms:publisher ?publisher .
+
+  OPTIONAL {
+    ?dataset dcterms:description ?description .
+  }
+
+  OPTIONAL {
+    # Try to get the publisher's label from local data
+    ?publisher rdfs:label ?publisherNameLocal .
+    FILTER (lang(?publisherNameLocal) = "en")
+  }
+
+  OPTIONAL {
+    # If the publisher is a Wikidata entity, fetch its label from Wikidata
+    FILTER (STRSTARTS(STR(?publisher), "http://www.wikidata.org/entity/"))
+    SERVICE <https://query.wikidata.org/sparql> {
+      ?publisher rdfs:label ?publisherNameWikidata .
+      FILTER (lang(?publisherNameWikidata) = "en")
+    }
+  }
+  # Use the local label if available; otherwise, use the Wikidata label
+  BIND(COALESCE(?publisherNameLocal, ?publisherNameWikidata) AS ?publisherName)
+}
+ORDER BY ?title
