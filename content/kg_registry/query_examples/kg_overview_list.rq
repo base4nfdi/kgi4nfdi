@@ -6,31 +6,38 @@ PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX wd:      <http://www.wikidata.org/entity/>
 PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
 
-SELECT DISTINCT ?dataset ?title ?description ?publisher ?publisherNameWikidata
+SELECT DISTINCT ?dataset ?title ?description ?publisher ?publisherName
 WHERE {
+  # Basic dataset metadata
   ?dataset a dcat:Dataset ;
            dcterms:title ?title ;
            dcterms:publisher ?publisher .
 
-  OPTIONAL {
-    ?dataset dcterms:description ?description .
-  }
+  # Optional description
+  OPTIONAL { ?dataset dcterms:description ?description }
 
+  # Local English labels (if available)
   OPTIONAL {
-    # Try to get the publisher's label from local data
     ?publisher rdfs:label ?publisherNameLocal .
-    FILTER (lang(?publisherNameLocal) = "en")
+    FILTER(LANG(?publisherNameLocal) = "en")
   }
 
-  OPTIONAL {
-    # If the publisher is a Wikidata entity, fetch its label from Wikidata
-    FILTER (STRSTARTS(STR(?publisher), "http://www.wikidata.org/entity/"))
-    SERVICE <https://query.wikidata.org/sparql> {
-      ?publisher rdfs:label ?publisherNameWikidata .
-      FILTER (lang(?publisherNameWikidata) = "en")
+  # Wikidata labels via subquery (bulk resolution)
+  {
+    SELECT ?publisher ?publisherNameWikidata
+    WHERE {
+      # Get all unique publishers first
+      { SELECT DISTINCT ?publisher WHERE { ?dataset dcterms:publisher ?publisher } }
+
+      # Resolve labels from Wikidata in one SERVICE call
+      SERVICE <https://query.wikidata.org/sparql> {
+        ?publisher rdfs:label ?publisherNameWikidata .
+        FILTER(LANG(?publisherNameWikidata) = "en")
+      }
     }
   }
-  # Use the local label if available; otherwise, use the Wikidata label
+
+  # Prioritize local labels, fallback to Wikidata
   BIND(COALESCE(?publisherNameLocal, ?publisherNameWikidata) AS ?publisherName)
 }
 ORDER BY ?title

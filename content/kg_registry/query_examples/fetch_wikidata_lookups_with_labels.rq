@@ -1,0 +1,18 @@
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?wd_item ?wikidata_label
+WHERE {
+  # Get Wikidata entities from your local dataset
+  ?subject ?predicate ?wd_item .
+
+  # Ensure we're dealing with Wikidata entities
+  FILTER(STRSTARTS(STR(?wd_item), STR(wd:)))
+
+  # Query Wikidata's SPARQL endpoint to fetch labels
+  SERVICE <https://query.wikidata.org/sparql> {
+    ?wd_item rdfs:label ?wikidata_label .
+    # Optional: Filter for English labels (remove if you want all languages)
+    FILTER(LANG(?wikidata_label) = "en")
+  }
+}
