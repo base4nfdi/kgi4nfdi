@@ -1,3 +1,10 @@
+# THIS REPO MOVED TO A NEW LOCATION
+# THE NEW LINK: https://github.com/KGI4NFDI/kgi4nfdi-website
+
+---
+---
+---
+
 ![KGI-github-small](https://github.com/user-attachments/assets/d6978a6f-ca5d-4452-a40c-fd7ad6fa0375)
 
 # KGI4NFDI 
